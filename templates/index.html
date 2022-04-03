@@ -32,7 +32,14 @@
 								<ul class="d-flex flex-row align-items-start justify-content-start">
 									<li class="active"><a href="{% static 'index.html' %}">Home</a></li>
 									<li><a href="contact.html">Contact</a></li>
+
+									{% if user.is_authenticated%}
+									<li>Hello,{{user.first_name}}</li>
+									<li><a href="accounts/logout">Logout</a></li>
+									{%else%}
 									<li><a href="accounts/register">Register</a></li>
+									<li><a href="accounts/login">Login</a></li>
+									{% endif %}
 								</ul>
 							</nav>
 							<div class="header_phone ml-auto">Call us: +919459407771</div>
@@ -295,7 +302,7 @@
 
 							<!-- Slide -->
 							<div class="owl-item text-center">
-								<div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
+								<div class="testimonial">Lorem </div>
 								<div class="testimonial_author">
 									<div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
 										<div>john turner,</div>
