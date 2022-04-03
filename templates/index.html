@@ -36,7 +36,7 @@
 									{% if user.is_authenticated%}
 									<li>Hello,{{user.first_name}}</li>
 									<li><a href="accounts/logout">Logout</a></li>
-									{%else%}
+									{% else %}
 									<li><a href="accounts/register">Register</a></li>
 									<li><a href="accounts/login">Login</a></li>
 									{% endif %}
@@ -106,7 +106,7 @@
 
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url(images/home_slider.jpg)"></div>
+					<div class="background_image" style="background-image:url({% static 'images/home_slider.jpg' %})"></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
@@ -122,7 +122,7 @@
 
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url(images/home_slider.jpg)"></div>
+					<div class="background_image" style="background-image:url({% static 'images/home_slider.jpg' %})"></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
@@ -138,7 +138,7 @@
 
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url(images/home_slider.jpg)"></div>
+					<div class="background_image" style="background-image:url({% static 'images/home_slider.jpg' %})"></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
@@ -192,7 +192,7 @@
 	<!-- Intro -->
 
 	<div class="intro">
-		<div class="intro_background" style="background-image:url(images/intro.png)"></div>
+		<div class="intro_background" style="background-image:url({% static 'images/intro.png' %})"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -410,7 +410,7 @@
 				<!-- News Sidebar -->
 				<div class="col-xl-4">
 					<div class="travello">
-						<div class="background_image" style="background-image:url(images/travello.jpg)"></div>
+						<div class="background_image" style="background-image:url({% static 'images/travello.jpg' %})"></div>
 						<div class="travello_content">
 							<div class="travello_content_inner">
 								<div></div>
@@ -476,7 +476,7 @@
 						<!-- Footer Contact Item -->
 						<div class="col-xl-4 footer_contact_col">
 							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
-								<div class="footer_contact_icon"><img src="images/trekking.svg" alt=""></div>
+								<div class="footer_contact_icon"><img src="{% static 'images/trekking.svg' %}" alt=""></div>
 								<div class="footer_contact_title">come & drop by</div>
 								<div class="footer_contact_list">
 									<ul style="max-width:190px">
@@ -519,5 +519,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="{% static 'plugins/easing/easing.js' %}"></script>
 <script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
 <script src="{% static 'js/custom.js' %}"></script>
+
 </body>
 </html>
